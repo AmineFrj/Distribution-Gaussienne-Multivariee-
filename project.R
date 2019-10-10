@@ -130,3 +130,9 @@ plotRealAndPredict(jeu3,id[,c(7:9)])
 #   }
 # }
 #id = apply(jeu1$X,FUN = maxClassif,MARGIN = F)
+=======
+### Function 
+classification <- function(x,Mu,sigma){
+  return (-1/2*t(x-Mu)%*%solve(sigma)%*%(x-Mu) - 1/2 *log(det(sigma)) +log(1/2))
+}
+
