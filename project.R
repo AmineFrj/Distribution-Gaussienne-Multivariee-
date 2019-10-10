@@ -10,3 +10,8 @@ jeu2 <- simdataset(n = 500, Pi = jeu2.Q$Pi, Mu = jeu2.Q$Mu, S = jeu2.Q$S)
 #jeu 3
 jeu3.Q <- MixSim(MaxOmega = 0.10, BarOmega = 0.05, K = 3, p = 2, sph = FALSE)
 jeu3 <- simdataset(n = 500, Pi = jeu3.Q$Pi, Mu = jeu3.Q$Mu, S = jeu3.Q$S)
+
+### Function 
+classification <- function(x,Mu,sigma){
+  return (-1/2*t(x-Mu)%*%solve(sigma)%*%(x-Mu) - 1/2 *log(det(sigma)) +log(1/2))
+}
