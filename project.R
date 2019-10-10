@@ -41,9 +41,13 @@ maxClassif = function(jeu,classif,x){ # Jeu = JDD / classif (1, 2 ou 3) choix de
     } else if (classif == 2 ){
       a = classification2(x,jeu$Mu[1,], jeu$S[,,1])
       b = classification2(x,jeu$Mu[2,], jeu$S[,,2])
+      c = classification2(x,jeu$Mu[3,], jeu$S[,,3])
+      
     } else if (classif == 3){
       a = classification3(x,jeu$Mu[1,], jeu$S[,,1])
       b = classification3(x,jeu$Mu[2,], jeu$S[,,2])
+      c = classification3(x,jeu$Mu[3,], jeu$S[,,3])
+      
     }
   
   
